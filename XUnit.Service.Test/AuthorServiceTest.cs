@@ -1,16 +1,13 @@
 ﻿using AutoFixture.AutoMoq;
 using AutoFixture;
 using Moq;
-using Nitro.Infrastructure.Data;
-using Nitro.Infrastructure.Test;
-using Nitro.Kernel.Interfaces.Data;
-using Nitro.Service.Cms;
-using System.Collections.Generic;
-using System.Linq;
-using Xunit;
-using Nitro.Core.Data.Domain;
-using Nitro.Core.Models.Cms;
 using FluentAssertions;
+using XUnit.Infrastructure;
+using XUnit.Service.Service;
+using XUnit.Service.Data.Domain;
+using XUnit.Service.Data;
+using XUnit.Service.Data.Infra;
+using XUnit.Service.Models;
 
 namespace Nitro.Service.Test.Cms
 {

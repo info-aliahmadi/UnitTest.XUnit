@@ -5,7 +5,7 @@ using XUnit.Service.Service;
 
 namespace XUnit.Api.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     [ApiController]
     [Route("Api/Cms/[controller]")]
     public class AuthorController : ControllerBase
@@ -19,7 +19,6 @@ namespace XUnit.Api.Controllers
             _logger = logger;
             _authorService = authorService;
         }
-        [AllowAnonymous]
         [HttpGet(nameof(GetAuthors))]
         public async Task<ActionResult<IEnumerable<AuthorModel>>> GetAuthors()
         {

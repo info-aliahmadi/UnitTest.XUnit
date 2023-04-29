@@ -1,12 +1,11 @@
 
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.AspNetCore.Server.IISIntegration;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
+using XUnit.Service.Data.Infra;
+using XUnit.Service.Service;
 
 namespace XUnit.Infrastructure
 {
@@ -18,7 +17,7 @@ namespace XUnit.Infrastructure
             builder.ConfigureAppConfiguration(config =>
             {
                 Configuration = new ConfigurationBuilder()
-                    .AddJsonFile("integrationsettings.json")
+                    .AddJsonFile("appsettings.json")
                     .Build();
                 config.AddConfiguration(Configuration);
             });
@@ -28,9 +27,13 @@ namespace XUnit.Infrastructure
                 services.AddTransient<ICommandRepository, CommandRepository>();
                 services.AddTransient<IAuthorService, AuthorService>();
                 services.AddTransient<IRoleService, RoleService>();
-                services.AddAuthentication(defaultScheme: "TestScheme")
-                 .AddScheme<AuthenticationSchemeOptions, TestAuthHandler>(
-                     "TestScheme", options => { });
+
+                /* If you are using Identity and Authorize attribute on controller or actions, uncomment code below: */
+
+                //services.AddAuthentication(defaultScheme: "TestScheme")
+                // .AddScheme<AuthenticationSchemeOptions, TestAuthHandler>(
+                //     "TestScheme", options => { });
+
             });
 
         }

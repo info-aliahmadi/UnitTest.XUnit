@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using XUnit.Service.Models;
 using XUnit.Service.Service;
 
 namespace XUnit.Api.Controllers
 {
+    [AllowAnonymous]
     [ApiController]
     [Route("Api/Cms/[controller]")]
     public class RoleController : ControllerBase

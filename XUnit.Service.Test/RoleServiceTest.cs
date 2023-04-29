@@ -1,14 +1,13 @@
 ﻿using AutoFixture;
 using AutoFixture.AutoMoq;
 using FluentAssertions;
-using Microsoft.EntityFrameworkCore;
 using Moq;
-
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Threading;
-using Xunit;
+using XUnit.Infrastructure;
+using XUnit.Service.Data;
+using XUnit.Service.Data.Domain;
+using XUnit.Service.Data.Infra;
+using XUnit.Service.Models;
+using XUnit.Service.Service;
 
 namespace Nitro.Service.Test.Auth
 {

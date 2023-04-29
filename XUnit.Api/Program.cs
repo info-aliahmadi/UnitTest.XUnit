@@ -1,6 +1,8 @@
 
 using Microsoft.EntityFrameworkCore;
 using XUnit.Service.Data;
+using XUnit.Service.Data.Infra;
+using XUnit.Service.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +22,13 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ApplicationDbContext>((serviceProvider, options) =>
     options.UseSqlServer(connectionString, b => b.MigrationsAssembly("XUnit.Api"))); // the default pool size in 1024 
 
+// services
+builder.Services.AddScoped<ICommandRepository, CommandRepository>();
+builder.Services.AddScoped<IQueryRepository, QueryRepository>();
+builder.Services.AddScoped<IAuthorService, AuthorService>();
+builder.Services.AddScoped<IRoleService, RoleService>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -35,4 +44,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+
 app.Run();
+
+public partial class Program { }
