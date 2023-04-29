@@ -3,7 +3,7 @@ This project is a sample test project that uses xunit, AutoFixture, FluentAssert
 
 # Getting Started
 # Prerequisites
-To run this project, you will need to have .NET 7 and Microsoft SQL Server (or a compatible database) installed on your machine. You can download .NET 7 from the official .NET website: https://dotnet.microsoft.com/download/dotnet/7.0
+To run this project, you will need to have .NET 7 and Microsoft SQL Server (or a compatible database) installed on your machine. You can download .NET 7 from the official .NET website: [https://dotnet.microsoft.com/download/dotnet/7.0](https://dotnet.microsoft.com/download/dotnet/7.0)
 
 ## Installing
 To install the necessary dependencies for this project, open a command prompt or terminal window and navigate to the project directory. Then, run the following command:
