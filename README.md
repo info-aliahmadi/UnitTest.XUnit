@@ -1,4 +1,4 @@
-# Unit Test in Asp.Net 7 by XUnit, Autofixture, FluentAssertion with EntityFramework
+# Unit Test in Asp.Net 7 by XUnit, Autofixture, FluentAssertion and EntityFramework
 This project is a sample test project that uses xunit, AutoFixture, FluentAssertion, and Entity Framework in .NET 7. It contains a set of automated tests that can be used to validate the behavior of your Entity Framework-based data access layer.
 
 # Getting Started
